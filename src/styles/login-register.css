@@ -1,0 +1,217 @@
+/* ================= PAGE ================= */
+.login-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 16px;
+}
+
+.login-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* ================= CARD ================= */
+.login-card {
+  position: relative;
+  z-index: 2;
+  width: 420px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* ================= TEXT ================= */
+.login-card h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.login-card p {
+  margin: 10px 0 28px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ================= INPUTS ================= */
+.phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px;
+  gap: 10px;
+  margin-bottom: 14px;
+  transition: all 0.3s ease;
+}
+
+.phone-input:focus-within {
+  border-color: #1f6cff;
+  box-shadow: 0 0 0 3px rgba(31, 108, 255, 0.1);
+}
+
+.phone-input input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  width: 100%;
+}
+
+/* ================= BUTTON ================= */
+.login-btn {
+  margin-top: 8px;
+  width: 100%;
+  height: 52px;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-btn.active {
+  background: #1f6cff;
+  cursor: pointer;
+}
+
+.login-btn.active:hover {
+  background: #1557d4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(31, 108, 255, 0.3);
+}
+
+.login-btn.active:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(31, 108, 255, 0.2);
+}
+
+.login-btn.inactive {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.login-btn:disabled {
+  cursor: not-allowed;
+}
+
+/* ================= DIVIDER ================= */
+.divider {
+  margin: 26px 0;
+  position: relative;
+}
+
+.divider span {
+  background: white;
+  padding: 0 12px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.divider::before {
+  content: '';
+  height: 1px;
+  background: #e5e7eb;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+}
+
+/* ================= SOCIAL ================= */
+.social-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  border-color: #1f6cff;
+  background: #f8faff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(31, 108, 255, 0.15);
+}
+
+.social-btn:active {
+  transform: translateY(0);
+}
+
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ================= FOOTER ================= */
+.referral {
+  margin-top: 20px;
+  color: #1f6cff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.referral:hover {
+  color: #1557d4;
+  text-decoration: underline;
+}
+
+.login-footer {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .login-card {
+    width: 360px;
+    padding: 28px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 640px) {
+  .login-card {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .login-card h2 {
+    font-size: 20px;
+  }
+
+  .social-wrapper {
+    flex-direction: column;
+  }
+
+  .social-btn {
+    width: 100%;
+  }
+}
